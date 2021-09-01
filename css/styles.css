@@ -33,14 +33,19 @@ body {
 }
 
 /* site-nav */
+
 .site-nav {
   letter-spacing: 0.02em;
 }
 .site-nav .link {
-  color: var(--title-text-color);
+  color: var(--title--color);
 }
-.site-nav :hover,
-.site-nav :focus {
+.site-nav .link:hover,
+.site-nav .link:focus {
+  color: var(--accent-color);
+}
+.site-nav .studios,
+.site-nav .portfolio {
   color: var(--accent-color);
 }
 .auth-nav .link {
@@ -61,6 +66,7 @@ body {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.4;
+  text-transform: uppercase;
 }
 .hero-button {
   background-color: #2196f3;
@@ -71,6 +77,10 @@ body {
   font-size: 16px;
   line-height: 1.9;
   cursor: pointer;
+}
+.hero-button:hover,
+.hero-button:focus {
+  background-color: #188ce8;
 }
 /* Section */
 .section {
@@ -89,10 +99,26 @@ body {
   color: var(--title-text-color);
 }
 /* Skills */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 .skills .title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.2;
+}
+.skills-list .title {
+  text-transform: uppercase;
 }
 .skills p {
   font-size: 14px;
@@ -126,24 +152,29 @@ body {
   line-height: 1.7;
 }
 .footer-adress p {
+  font-weight: 400;
   color: #ffffff;
 }
+
 .footer-adress .link {
-  color: var(--primary-text-color);
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 400;
   font-size: 14px;
   line-height: 1.7;
 }
-.footer-adress :hover,
-.footer-adress :focus {
+.footer-adress .link:hover,
+.footer-adress .link:focus {
   color: var(--accent-color);
 }
+/* .footer-adress :hover,
+.footer-adress :focus {
+  color: var(--accent-color);
+} */
 /* PORTFOLIO */
 .portfolio-nav {
   color: var(--title-text-color);
 }
-.portfolio-nav :hover {
-  color: var(--accent-color);
-}
+
 .portfolio-button {
   background-color: #f5f4fa;
   font-weight: 500;
@@ -151,6 +182,14 @@ body {
   line-height: 1.6;
   cursor: pointer;
 }
+.portfolio-button:hover {
+  background-color: var(--accent-color);
+  color: #ffffff;
+}
+.portfolio-list a {
+  text-decoration: none;
+}
+
 .portfolio-list .title {
   letter-spacing: 0.06em;
   font-weight: bold;
