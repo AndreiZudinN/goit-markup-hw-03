@@ -1,3 +1,3 @@
-# goit-markup-hw-02
-дз2
-https://andreizudinn.github.io/goit-markup-hw-02/index.html
+# goit-markup-hw-03
+дз3
+https://andreizudinn.github.io/goit-markup-hw-03/
